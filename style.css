@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 
-/*
-Grün: #A5DE2D
-Pink: #F82670
-Dunkel: #272822
-Hell:   #E2E2E0
- */
+:root {
+	--green: #A5DE2D;
+	--pink: #F82670;
+	--dark: #272822;
+	--light: #E2E2E0;
+}
 
 body {
-	background-color: #E2E2E0;
+	background-color: white;
 	color: black;
 	font-family: 'Poppins', sans-serif;
 	margin: 0;
@@ -22,7 +22,7 @@ body {
 }
 
 nav {
-	background-color: #272822;
+	background-color: var(--dark);
 	font-family: 'Roboto Mono', monospace;
 	font-size: 17px;
 	border-style: none;
@@ -37,13 +37,25 @@ nav {
 }
 nav a {
 	float: left;
-	color: #E2E2E0;
+	color: var(--light);
 	text-align: center;
 	text-decoration: none;
 	padding: 10px 0px 12px;
 	width: 25%;
 }
-nav a:hover {
-	background-color: #A5DE2D;
-	color: #272822;
+nav a:not(.active):hover {
+	background-color: var(--green);
+	color: var(--dark);
+}
+.active {
+	background-color: var(--pink);
+}
+
+.body {
+	background-color: var(--light);
+	color: var(--dark);
+	border-radius: 30px;
+	box-shadow: 50px 0px 100px -40px var(--green), -50px -0px 100px -40px var(--pink);
+	margin: 5% 10% 10px 10%;
+	padding: 20px;
 }
