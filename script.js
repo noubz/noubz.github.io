@@ -11,7 +11,10 @@ function scroll() {
 	if (window.pageYOffset <= img_height) {
 		nav.style.top = (img_height - window.pageYOffset) + "px";
 	}
-	else { nav.style.top = "7px"}
+	else { 
+		nav.style.top = "7px"; 
+		document.getElementById("arrowUp").style.animationPlayState = "running";
+	}
 
 	// Sektion detection
 	for (var section of sections) {
@@ -25,7 +28,4 @@ function scroll() {
 };
 window.addEventListener('scroll', scroll);
 
-function update() {
-	scroll();
-}
-window.addEventListener('resize', update)
+window.addEventListener('resize', function () { scroll(); });

@@ -7,6 +7,7 @@
 	--dark: #272822;
 	--light: #E2E2E0;
 }
+html { scroll-behavior: smooth; }
 
 body {
 	background-color: white;
@@ -15,10 +16,21 @@ body {
 	margin: 0;
 }
 
+#arrowUp {
+	background-color: var(--light);
+	position: fixed;
+	border-radius: 100px;
+	width: 40px;
+	bottom: 15px;
+	right: 15px;
+	opacity: 0;
+	animation: arrowAnim 0.2s ease-in forwards paused;
+}
+
 #banner img {
 	width: 100%;
 	height: auto;
-	margin: 0;
+	align-self: right;
 }
 
 nav {
@@ -58,4 +70,9 @@ nav a:not(.active):hover {
 	box-shadow: 50px 0px 100px -40px var(--green), -50px -0px 100px -40px var(--pink);
 	margin: 5% 10% 10px 10%;
 	padding: 20px;
+}
+
+@keyframes arrowAnim {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
