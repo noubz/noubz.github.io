@@ -5,15 +5,16 @@ const sections = document.getElementsByTagName("section");
 // Navbar-Scroll aktualisierung
 function scroll() {
 	// Navbar verschiebung
-	let img_height = document.getElementById("banner").offsetHeight;
 	let nav = document.getElementById("navbar");
+	let img_height = document.getElementById("banner").offsetHeight;
 
 	if (window.pageYOffset <= img_height) {
 		nav.style.top = (img_height - window.pageYOffset) + "px";
+		document.getElementById("arrowUp").style.opacity = 0;
 	}
 	else { 
 		nav.style.top = "7px"; 
-		document.getElementById("arrowUp").style.animationPlayState = "running";
+		document.getElementById("arrowUp").style.opacity = 1;
 	}
 
 	// Sektion detection
