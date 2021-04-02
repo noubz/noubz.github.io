@@ -73,6 +73,7 @@ nav a:not(.active):hover {
 	color: var(--dark);
 	border-radius: 30px;
 	box-shadow: 50px 0px 100px -40px var(--green), -50px -0px 100px -40px var(--pink);
-	margin: 5% 10% 10px 10%;
+	margin: 5% auto 10px auto;
 	padding: 20px;
+	max-width: 1000px; 
 }
